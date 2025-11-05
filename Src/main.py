@@ -148,8 +148,17 @@ elif st.session_state.stage == 'quiz':
             is_correct = False
 
         # Record attempt using tracker
-        st.session_state.tracker.add_attempt(is_correct, time_taken)
-
+        st.session_state.tracker.add_attempt(
+            is_correct,
+            time_taken,
+            name=st.session_state.name,
+            question_no=st.session_state.question_count + 1,
+            question=st.session_state.current_question,
+            difficulty=st.session_state.difficulty,
+            level=st.session_state.level,
+            event="attempt"
+        )
+        
         # Show feedback
         if is_correct:
             st.success(f"✓ Correct! Time: {time_taken:.2f} seconds")
@@ -290,3 +299,4 @@ elif st.session_state.stage == 'results':
     if st.button("🔄 Play Again", type="primary", use_container_width=True):
         reset_game()
         st.rerun()
+
