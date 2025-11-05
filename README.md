@@ -43,7 +43,7 @@ Math Adventures is an interactive, AI-driven learning game that makes arithmetic
 | --------------------- | ------------------------------------------------------------ |
 | `main.py`             | Streamlit app that handles the user interface and game flow. |
 | `puzzle_generator.py` | Creates math problems for different modes and levels.        |
-| `Tracker.py`          | Tracks performance, accuracy, and response times.            |
+| `Tracker.py`          | Tracks performance, accuracy, and response times and also log them in CSV file.            |
 | `adaptive_engine.py`  | Controls logic for adaptive difficulty and recommendations.  |
 | `requirement.txt`     | This file lists all Python dependencies your project needs to run.|
 ---
